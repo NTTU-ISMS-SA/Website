@@ -1,0 +1,263 @@
+/* =========================================
+   Contact Page Specific Styles
+   ========================================= */
+
+/* Hero / Header Section */
+.contact-hero {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-hero p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Container Layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Column: Contact Info */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #e0f7f4;
+    color: #00b199;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+.info-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.info-content a {
+    color: #00b199;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-content a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Links in Contact Info */
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    color: #555;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #00b199;
+    color: white;
+}
+
+/* Right Column: Contact Form */
+.contact-form-container {
+    flex: 1.5; /* Makes the form wider than info */
+    min-width: 300px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #00b199;
+}
+
+textarea.form-control {
+    resize: vertical; /* Allows user to resize vertically only */
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: #00b199;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #008f7a;
+}
+
+/* Form Unavailable Overlay */
+.contact-form-container {
+    position: relative; /* 关键：为绝对定位的遮罩提供参照 */
+    overflow: hidden;   /* 防止模糊滤镜溢出 */
+}
+
+/* 遮罩层 */
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+    backdrop-filter: blur(4px); /* 背景模糊效果 (毛玻璃) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay-content i {
+    font-size: 3.5rem;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.overlay-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.overlay-content p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* 替换为邮件按钮的特殊样式 */
+.btn-mail-fallback {
+    background: linear-gradient(135deg, #00b199 0%, #008f7a 100%); /* 渐变背景 */
+    color: white;
+    padding: 15px 40px; /* 稍微增加左右内边距，弥补图标去掉后的空白感 */
+    border-radius: 50px; /* 全圆角 */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block; /* 改为 inline-block 即可 */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 弹性动画 */
+    box-shadow: 0 4px 15px rgba(0, 177, 153, 0.4); /* 柔和阴影 */
+    border: 2px solid transparent; /* 预留边框位置 */
+}
+
+/* 按钮内的图标样式 */
+.btn-mail-fallback i {
+    font-size: 1.2rem;
+}
+
+/* 悬停效果 */
+.btn-mail-fallback:hover {
+    transform: translateY(-3px) scale(1.02); /* 上浮并轻微放大 */
+    box-shadow: 0 8px 25px rgba(0, 177, 153, 0.5); /* 阴影加深 */
+    background: linear-gradient(135deg, #02c7ac 0%, #00a890 100%); /* 颜色变亮 */
+}
+
+/* 点击/按下效果 */
+.btn-mail-fallback:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 2px 10px rgba(0, 177, 153, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .contact-form-container {
+        padding: 25px;
+    }
+}

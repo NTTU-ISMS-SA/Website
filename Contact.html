@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>聯絡我們 - 臺東大學資訊管理學系學生會</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styleContact.css">
+        <link rel="icon" type="image/png" href="LOGO/NTTU_ISMS_SA_LOGO_1.png">
+    </head>
+    
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="LOGO\NTTU_ISMS_SA_LOGO_2.png" alt="NTTU_ISMS_SA_LOGO_2">
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="Events.html">活動資訊</a></li>
+                        <li><a href="AboutUs.html">關於我們</a></li>
+                        <li><a href="Contact.html">聯絡方式</a></li>
+                    </ul>
+                </nav>                
+            </div>
+        </header>
+
+        <main>
+            <section class="contact-hero">
+                <div class="container">
+                    <h1>聯絡我們</h1>
+                    <p>有任何問題、建議或合作意向？歡迎隨時與我們聯繫！</p>
+                </div>
+            </section>
+
+            <div class="contact-container">  
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>我們的辦公室</h3>
+                            <p>國立臺東大學 知本校區<br>理工學院 C 棟 C1XX 系學會辦公室</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>電子郵件</h3>
+                            <p>寄信給我們：<br><a href="mailto:nttu.isms.sa@outlook.com">nttu.isms.sa@outlook.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Instagram 私訊</h3>
+                            <p>關注我們的 IG 並私訊：<br><a href="https://www.instagram.com/nttu.isms.sa/" target="_blank">@nttu.isms.sa</a></p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>關注我們</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com/NTTU-ISMS-SA" target="_blank" class="social-icon" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/nttu.isms.sa/" target="_blank" class="social-icon" title="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    
+                    <!-- 新增：遮罩层 Start -->
+                    <div class="form-overlay">
+                        <div class="overlay-content">
+                            <i class="fa-solid fa-server"></i>
+                            <h3>伺服器功能尚未開通</h3>
+                            <p>抱歉，目前網站後端系統正在維護與建置中。<br>請直接透過電子郵件與我們聯繫。</p>
+                            <a href="mailto:nttu.isms.sa@outlook.com" class="btn-mail-fallback">
+                                寄信給我們
+                            </a>
+                        </div>
+                    </div>
+
+                    <h2>發送訊息</h2>
+                    <!-- 为了让效果更逼真，我们可以给 form 加上一个 opacity 或者 pointer-events: none，但有了遮罩其实不需要 -->
+                    <form action="#" method="POST" style="opacity: 0.3; pointer-events: none;"> 
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="您的稱呼" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="您的電子郵件地址" disabled>
+                        </div>
+                        
+                        <!-- 省略原本的表单内容，这里只是为了展示背景 -->
+                         <div class="form-group">
+                            <label for="subject">主旨</label>
+                            <select id="subject" name="subject" class="form-control" disabled>
+                                <option value="general">一般諮詢</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">訊息內容</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="請詳細描述您的問題或建議..." disabled></textarea>
+                        </div>
+
+                        <button type="button" class="submit-btn" disabled>發送訊息</button>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <a href="ToS.html">服務條款</a>
+                    <a href="Privacy.html">隱私聲明</a>
+                    <a href="Links.html">相關鏈接</a>
+                </div>
+
+                <div class="footer-center">
+                    <a href="https://github.com/NTTU-ISMS-SA" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github fa-lg"></i>
+                    </a>     
+
+                    <a href="https://www.instagram.com/nttu.isms.sa/" target="_blank" title="Instagram">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                </div>
+
+                <div class="footer-right">
+                    <p>&copy; 2026 NTTU ISMS SA. All rights reserved.</p>
+                </div>
+
+            </div>
+        </footer>
+    </body>
+</html>

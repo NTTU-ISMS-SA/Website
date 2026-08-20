@@ -1,0 +1,234 @@
+/* =========================================
+   Blog / Article Page Styles (News & Zhihu Column Style)
+   ========================================= */
+
+/* --- 1. Article Layout Container --- */
+.blog-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- 2. Hero & Cover Section --- */
+.blog-hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.blog-cover-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* 底部渐变遮罩，确保标题清晰可读 */
+.blog-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+    z-index: 2;
+}
+
+.blog-hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 40px 48px;
+    color: #fff;
+}
+
+/* --- 3. Typography System --- */
+.blog-title {
+    font-family: "Noto Serif SC", "Georgia", serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 0;
+}
+
+.blog-author {
+    font-weight: 600;
+}
+
+/* 正文排版 */
+.blog-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+    word-break: break-word;
+}
+
+.blog-content h2 {
+    font-family: "Noto Serif SC", "Georgia", serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111;
+    margin: 2.5em 0 1em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.blog-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222;
+    margin: 2em 0 0.8em;
+}
+
+.blog-content p {
+    margin-bottom: 1.6em;
+    text-align: justify;
+}
+
+/* --- 4. Elements Styling --- */
+
+/* 链接 */
+.blog-content a {
+    color: #00b199;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 177, 153, 0.3);
+    transition: border-color 0.2s;
+}
+
+.blog-content a:hover {
+    border-bottom-color: #00b199;
+}
+
+/* 引用块 (知乎风格) */
+.blog-content blockquote {
+    margin: 1.5em 0;
+    padding: 1em 1.5em;
+    border-left: 4px solid #00b199;
+    background-color: #f7fffd;
+    color: #555;
+    font-size: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* 图片 */
+.blog-content img {
+    display: block;
+    max-width: 100%;
+    margin: 2em auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 分割线 */
+.blog-content hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 3em 0;
+}
+
+/* 代码块 */
+.blog-content pre {
+    background: #2b2b2b;
+    color: #f8f8f2;
+    padding: 1.5em;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5em 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.blog-content code {
+    font-family: "Consolas", "Courier New", monospace;
+}
+
+.blog-content p code {
+    background-color: #f0f0f0;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #c7254e;
+}
+
+/* --- 5. Article Footer & Interactions --- */
+.blog-footer {
+    margin-top: 4em;
+    padding-top: 2em;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.blog-tag {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    background: #f0f0f0;
+    color: #666;
+    border-radius: 999px;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.blog-tag:hover {
+    background: #00b199;
+    color: #fff;
+}
+
+.blog-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.blog-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #888;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+}
+
+.blog-action-btn:hover {
+    color: #00b199;
+}
+
+/* --- 6. Responsive Design --- */
+@media (max-width: 768px) {
+    .blog-hero {
+        min-height: 300px;
+    }
+    
+    .blog-hero-content {
+        padding: 30px 24px;
+    }
+
+    .blog-content h2 {
+        font-size: 1.4rem;
+    }
+}

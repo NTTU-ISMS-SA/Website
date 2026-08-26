@@ -4,7 +4,7 @@
 
 /* --- 1. Article Layout Container --- */
 .blog-container {
-    max-width: 780px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -72,6 +72,8 @@
 
 /* 正文排版 */
 .blog-content {
+    max-width: 960px;
+    margin: 0 auto;
     font-size: 1.05rem;
     line-height: 1.8;
     color: #1a1a1a;
@@ -152,6 +154,24 @@
     margin: 1.5em 0;
     font-size: 0.95rem;
     line-height: 1.6;
+    text-indent: 0;
+}
+
+.blog-content pre code {
+    display: block;
+    padding: 0;
+}
+
+/* 巧妙利用伪元素消除首尾因标签换行产生的空行 */
+.blog-content pre code::before,
+.blog-content pre code::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    /* 利用负边距抵消首尾的换行空白 */
+    margin-top: -1.5em; 
+    margin-bottom: -1.5em;
 }
 
 .blog-content code {
@@ -165,6 +185,8 @@
     font-size: 0.9em;
     color: #c7254e;
 }
+
+
 
 /* --- 5. Article Footer & Interactions --- */
 .blog-footer {
